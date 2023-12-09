@@ -3,22 +3,29 @@
 
 <head>
     <title>Open Weather API</title>
-   
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js">apiRequest</script>
 </head>
 
 <body>
     <h1>Open Weather API Forecast</h1>
 
+    <div id="input">
+        <form onsubmit="apiGet(); return false;">
+            <label for="inputCity">Type in city</label>
+            <input type="text" id="inputCity" name="inputCity"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div id="response">
 
-    <form onsubmit="apiGet(); return false;">
-        <label for="inputCity">Type in city</label>
-        <input type="text" id="inputCity" name="inputCity"><br>
-        <input type="submit" value="Submit">
-    </form>
+        <form>
+            <input type="text">
+        </form>
 
-    <div1 id="response"></div1>
-
+    </div>
+   <div id="img"><img id="icon" alt="Icon"></div> 
 
 </body>
 

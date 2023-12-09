@@ -6,12 +6,20 @@ function apiGet() {
         method: 'GET',
         redirect: 'follow'
     };
-
+    var temperature = ""
+    var weather =""
     fetch(url, requestOptions)
         .then(response => response.json())
         .then(data => {
             var temp = data.main.temp
-console.log("Temperature now is:",temp)
+            var weather = data.weather[0].main
+            var icon = data.weather[0].icon
+            temperature = "Temperature in " + cityInput + " now is: " + JSON.stringify(temp, null, 2)
+            iconURL = `https://openweathermap.org/img/wn/${icon}.png`
+         weather = JSON.stringify(weather)
+console.log(temperature, weather)
+            document.getElementById("response").innerHTML = temperature + "\n" + weather ;
+document.getElementById("icon").src = iconURL
         })
         // .then(result => console.log(result))
         .catch(error => console.log('error', error));
