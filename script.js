@@ -20,7 +20,7 @@ function apiGet() {
             console.log(temperature, weather)
             document.getElementById("response").innerHTML = `${temperature}`;
             document.getElementById("weatherState").src = iconURL
-            document.getElementById("weatherState").innerHTML = `${weather} ${weatherPic}`;
+            document.getElementById("weatherState").innerHTML = `${weather}`;
             document.getElementById("icon").src = iconURL
         })
        
