@@ -7,7 +7,7 @@ function apiGet() {
         redirect: 'follow'
     };
     var temperature = ""
-    var weather =""
+    var weather = ""
     fetch(url, requestOptions)
         .then(response => response.json())
         .then(data => {
@@ -16,11 +16,13 @@ function apiGet() {
             var icon = data.weather[0].icon
             temperature = "Temperature in " + cityInput + " now is: " + JSON.stringify(temp, null, 2)
             iconURL = `https://openweathermap.org/img/wn/${icon}.png`
-         weather = JSON.stringify(weather)
-console.log(temperature, weather)
-            document.getElementById("response").innerHTML = temperature + "\n" + weather ;
-document.getElementById("icon").src = iconURL
+            weather = JSON.stringify(weather)
+            console.log(temperature, weather)
+            document.getElementById("response").innerHTML = `${temperature}`;
+            document.getElementById("weatherState").src = iconURL
+            document.getElementById("weatherState").innerHTML = `${weather}`;
+            document.getElementById("icon").src = iconURL
         })
-        // .then(result => console.log(result))
+       
         .catch(error => console.log('error', error));
 }
