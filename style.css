@@ -7,10 +7,11 @@ background-size: 100% 100%;
 background-position: center;
 background-attachment: fixed;
 height: 90vh;
+color: seashell;
 }
 
 
-#container {
+#container { /* the parent of all elements */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +20,7 @@ height: 90vh;
 }
 #container h1 {
   margin-top: 2%;
-  color: white;
+  color: seashell;
   font-size: 50px;
   font-family: 'Roboto', sans-serif;
   text-align: center;
@@ -34,6 +35,8 @@ form input[type="submit"] {
 }
 
 #currentDate {
+  font-weight: 700;
+  color: black;
   display: flex;
   flex-direction: row;
   justify-content: space-between ;
@@ -46,14 +49,7 @@ form input[type="submit"] {
   margin: 3px;
 }
 
-/*
-#response,
-h1,
-#input,
-#weatherState {
-  text-align: center;
-}
-*/
+
 
 
 #response {
@@ -62,11 +58,25 @@ display:none;
 }
 
 
-#img {
+#img { /* the parent of the weather icon */
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 0;
+}
+
+.weatherColumn { /* the parent of all the weather elements */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.weatherColumn > * { /* all children of .weatherColumn */
+  
+  justify-content: space-between;
+  margin: 0 40px;
 }
 
 

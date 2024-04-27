@@ -10,7 +10,7 @@
 
 <body>
     <div id="container">
-        
+
         <h1>Open Weather API Forecast</h1>
         <div id="input">
             <form onsubmit="apiGet(); return false;">
@@ -21,34 +21,50 @@
         </div>
         <div id="currentDate">
             <label id="Today">Today: </h2>
-            <h3 id="date"></h3>
+                <h3 id="date"></h3>
         </div>
 
         <!--add a clock later-->
 
 
-        
-       
+
+
         <div id="response">
-            
+
             <form>
                 <input type="text" placeholder="Make invisible">
             </form>
-            
+
         </div>
-        
+
         <div id="img"><img id="icon"></div>
         <div id="weatherState">
-    <label id=""
-        </div>
-        
-        
-        
-    </div>
-<!--Add three columns with today's, tomorrow's and the day after's forecast-->
-    <div class="weatherColumn">
+            <label id="" ></label>
 
-    </div>
+
+
+        </div>
+        <!--Add three columns with today's, tomorrow's and the day after's forecast-->
+        <div class="weatherColumn">
+            <div class="Today">
+                <h3>Today</h3>
+                <p id="todayTemp">Temperature</p>
+                <p id="todayWeather">Status</p>
+                <img id="todayIcon">
+            </div>
+            <div class="Tomorrow">
+                <h3>Tomorrow</h3>
+                <p id="tomorrowTemp">Temperature</p>
+                <p id="tomorrowWeather">Status</p>
+                <img id="tomorrowIcon">
+            </div>
+            <div class="DayAfter">
+                <h3>Day After</h3>
+                <p id="dayAfterTemp">Temperature</p>
+                <p id="dayAfterWeather">Status</p>
+                <img id="dayAfterIcon">
+            </div>
+        </div>
 
 </body>
 
