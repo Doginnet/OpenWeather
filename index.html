@@ -9,27 +9,46 @@
 </head>
 
 <body>
-    <h1>Open Weather API Forecast</h1>
+    <div id="container">
+        
+        <h1>Open Weather API Forecast</h1>
+        <div id="input">
+            <form onsubmit="apiGet(); return false;">
+                <label for="inputCity">City/Country:</label>
+                <input type="text" id="inputCity" name="inputCity" placeholder="Type in city">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div id="currentDate">
+            <label id="Today">Today: </h2>
+            <h3 id="date"></h3>
+        </div>
 
-    <div id="input">
-        <form onsubmit="apiGet(); return false;">
-            <label for="inputCity">Type in city</label>
-            <input type="text" id="inputCity" name="inputCity"><br><br>
-            <input type="submit" value="Submit">
-        </form>
-    </div>
-    <div id="response">
+        <!--add a clock later-->
 
-        <form>
-            <input type="text">
-        </form>
 
-    </div>
-    <br>
-    <div id="weatherState">
+        
        
+        <div id="response">
+            
+            <form>
+                <input type="text" placeholder="Make invisible">
+            </form>
+            
+        </div>
+        
+        <div id="img"><img id="icon"></div>
+        <div id="weatherState">
+    <label id=""
+        </div>
+        
+        
+        
     </div>
-   <div id="img"><img id="icon"></div> 
+<!--Add three columns with today's, tomorrow's and the day after's forecast-->
+    <div class="weatherColumn">
+
+    </div>
 
 </body>
 
