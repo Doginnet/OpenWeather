@@ -1,4 +1,4 @@
-#response, h1, #input, #weatherState {
+/*#response, h1, #input, #weatherState {
 text-align: center;
 }
 #response{
@@ -13,4 +13,34 @@ form input[type="submit"]{
 }
 #img{
     margin-left: 500px;
+}*/
+#response,
+h1,
+#input,
+#weatherState {
+  text-align: center;
 }
+
+#response {
+  margin-top: 30px;
+
+}
+
+#input {
+  margin-right: 80px;
+}
+
+form input[type="submit"] {
+  margin-left: 70px;
+}
+
+#img {
+  margin-left: 495px;
+}
+
+body {
+  background-color: #3e3c3c;
+  color: white;
+}
+
+;
