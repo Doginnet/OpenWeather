@@ -1,48 +1,83 @@
-/*#response, h1, #input, #weatherState {
-text-align: center;
+
+
+body {
+background-image: url("./images/3b496355-df87-4983-adff-54c7f2ab1ee7.jpg");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+background-position: center;
+background-attachment: fixed;
+height: 90vh;
+color: seashell;
 }
-#response{
-    margin-top: 30px;
-    
+
+
+#container { /* the parent of all elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
 }
-#input {
-    margin-right: 80px;
-}
-form input[type="submit"]{
-    margin-left: 70px;
-}
-#img{
-    margin-left: 500px;
-}*/
-#response,
-h1,
-#input,
-#weatherState {
+#container h1 {
+  margin-top: 2%;
+  color: seashell;
+  font-size: 50px;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
 }
-
-#response {
-  margin-top: 30px;
-
-}
-
 #input {
-  margin-right: 80px;
+  margin-top: 5%;
+  margin-right: 35px;
 }
 
 form input[type="submit"] {
-  margin-left: 70px;
+  margin-left: 0px;
 }
 
-#img {
+#currentDate {
+  font-weight: 700;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between ;
+  margin-top: 3%;
+  margin-inline-start: -18%;
+ 
+}
+#currentDate h3 {
+  font-size: medium;
+  margin: 3px;
+}
+
+
+
+
+#response {
+  margin-top: 50px;
+display:none;
+}
+
+
+#img { /* the parent of the weather icon */
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 0;
 }
 
-body {
-  background-color: #3e3c3c;
-  color: white;
+.weatherColumn { /* the parent of all the weather elements */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
 }
+
+.weatherColumn > * { /* all children of .weatherColumn */
+  
+  justify-content: space-between;
+  margin: 0 40px;
+}
+
+
 

@@ -9,27 +9,62 @@
 </head>
 
 <body>
-    <h1>Open Weather API Forecast</h1>
+    <div id="container">
 
-    <div id="input">
-        <form onsubmit="apiGet(); return false;">
-            <label for="inputCity">Type in city</label>
-            <input type="text" id="inputCity" name="inputCity"><br><br>
-            <input type="submit" value="Submit">
-        </form>
-    </div>
-    <div id="response">
+        <h1>Open Weather API Forecast</h1>
+        <div id="input">
+            <form onsubmit="apiGet(); return false;">
+                <label for="inputCity">City/Country:</label>
+                <input type="text" id="inputCity" name="inputCity" placeholder="Type in city">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div id="currentDate">
+            <label id="Today">Today: </h2>
+                <h3 id="date"></h3>
+        </div>
 
-        <form>
-            <input type="text">
-        </form>
+        <!--add a clock later-->
 
-    </div>
-    <br>
-    <div id="weatherState">
-       
-    </div>
-   <div id="img"><img id="icon"></div> 
+
+
+
+        <div id="response">
+
+            <form>
+                <input type="text" placeholder="Make invisible">
+            </form>
+
+        </div>
+
+        <div id="img"><img id="icon"></div>
+        <div id="weatherState">
+            <label id="" ></label>
+
+
+
+        </div>
+        <!--Add three columns with today's, tomorrow's and the day after's forecast-->
+        <div class="weatherColumn">
+            <div class="Today">
+                <h3>Today</h3>
+                <p id="todayTemp">Temperature</p>
+                <p id="todayWeather">Status</p>
+                <img id="todayIcon">
+            </div>
+            <div class="Tomorrow">
+                <h3>Tomorrow</h3>
+                <p id="tomorrowTemp">Temperature</p>
+                <p id="tomorrowWeather">Status</p>
+                <img id="tomorrowIcon">
+            </div>
+            <div class="DayAfter">
+                <h3>Day After</h3>
+                <p id="dayAfterTemp">Temperature</p>
+                <p id="dayAfterWeather">Status</p>
+                <img id="dayAfterIcon">
+            </div>
+        </div>
 
 </body>
 
